@@ -1,6 +1,5 @@
 package org.example.docentes.repository;
 
-
 import org.example.docentes.entity.Professor;
 import org.springframework.data.jpa.repository.JpaRepository;
 

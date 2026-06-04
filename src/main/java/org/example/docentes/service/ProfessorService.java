@@ -1,6 +1,5 @@
 package org.example.docentes.service;
 
-
 import lombok.RequiredArgsConstructor;
 import org.example.docentes.entity.Professor;
 import org.example.docentes.repository.ProfessorRepository;
