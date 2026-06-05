@@ -55,4 +55,10 @@ public class ProfessorController {
     public ResponseEntity<ProfessorDTO> findById(@PathVariable Long id) {
         return ResponseEntity.ok(professorService.findById(id));
     }
+
+    @GetMapping("/username/{username}")
+    public ResponseEntity<ProfessorDTO> findByUsername(@PathVariable String username) {
+        return ResponseEntity.ok(professorService.findByUsername(username));
+    }
+
 }

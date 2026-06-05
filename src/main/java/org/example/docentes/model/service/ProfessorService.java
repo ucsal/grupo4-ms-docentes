@@ -59,6 +59,12 @@ public class ProfessorService {
                 .orElseThrow(() -> new RuntimeException("Professor não encontrado")));
     }
 
+    public ProfessorDTO findByUsername(String username) {
+        return professorRepository.findByEmail(username)
+                .map(this::toDTO)
+                .orElse(null); // retorna null se não for professor
+    }
+
     // mapper
 
     private Professor toEntity(ProfessorDTO dto) {
