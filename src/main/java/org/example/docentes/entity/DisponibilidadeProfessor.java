@@ -18,7 +18,6 @@ public class DisponibilidadeProfessor {
     @JoinColumn(name = "professor_id", nullable = false)
     private Professor professor;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "horario_id", nullable = false)
-    private Horario horario;
+    @Column(nullable = false)
+    private Long horarioId;
 }
