@@ -1,6 +1,7 @@
 package org.example.docentes.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.example.docentes.dto.DisponibilidadeDTO;
 import org.example.docentes.model.entity.DisponibilidadeProfessor;
 import org.example.docentes.model.service.DisponibilidadeProfessorService;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ public class DisponibilidadeProfessorController {
     private final DisponibilidadeProfessorService disponibilidadeService;
 
     @PostMapping
-    public ResponseEntity<DisponibilidadeProfessor> save(@RequestBody DisponibilidadeProfessor disponibilidade) {
+    public ResponseEntity<DisponibilidadeDTO> save(@RequestBody DisponibilidadeDTO disponibilidade) {
         return ResponseEntity.status(HttpStatus.CREATED).body(disponibilidadeService.save(disponibilidade));
     }
 
@@ -29,12 +30,12 @@ public class DisponibilidadeProfessorController {
     }
 
     @GetMapping
-    public ResponseEntity<List<DisponibilidadeProfessor>> findAll() {
+    public ResponseEntity<List<DisponibilidadeDTO>> findAll() {
         return ResponseEntity.ok(disponibilidadeService.findAll());
     }
 
     @GetMapping("/professor/{professorId}")
-    public ResponseEntity<List<DisponibilidadeProfessor>> findByProfessor(@PathVariable Long professorId) {
+    public ResponseEntity<List<DisponibilidadeDTO>> findByProfessor(@PathVariable Long professorId) {
         return ResponseEntity.ok(disponibilidadeService.findByProfessor(professorId));
     }
 }
