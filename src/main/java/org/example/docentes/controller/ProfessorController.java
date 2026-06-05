@@ -2,6 +2,7 @@ package org.example.docentes.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.example.docentes.dto.ProfessorDTO;
 import org.example.docentes.model.entity.Professor;
 import org.example.docentes.model.service.ProfessorService;
 import org.springframework.http.HttpStatus;
@@ -19,12 +20,12 @@ public class ProfessorController {
     private final ProfessorService professorService;
 
     @PostMapping
-    public ResponseEntity<Professor> save(@Valid @RequestBody Professor professor) {
+    public ResponseEntity<ProfessorDTO> save(@Valid @RequestBody ProfessorDTO professor) {
         return ResponseEntity.status(HttpStatus.CREATED).body(professorService.save(professor));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Professor> update(@PathVariable Long id, @Valid @RequestBody Professor professor) {
+    public ResponseEntity<ProfessorDTO> update(@PathVariable Long id, @Valid @RequestBody ProfessorDTO professor) {
         return ResponseEntity.ok(professorService.update(id, professor));
     }
 
@@ -41,17 +42,17 @@ public class ProfessorController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Professor>> findAll() {
+    public ResponseEntity<List<ProfessorDTO>> findAll() {
         return ResponseEntity.ok(professorService.findAll());
     }
 
     @GetMapping("/inativos")
-    public ResponseEntity<List<Professor>> findAllInativos() {
+    public ResponseEntity<List<ProfessorDTO>> findAllInativos() {
         return ResponseEntity.ok(professorService.findAllInativos());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Professor> findById(@PathVariable Long id) {
+    public ResponseEntity<ProfessorDTO> findById(@PathVariable Long id) {
         return ResponseEntity.ok(professorService.findById(id));
     }
 }
