@@ -1,6 +1,6 @@
-package org.example.docentes.repository;
+package org.example.docentes.model.repository;
 
-import org.example.docentes.entity.InteresseDisciplina;
+import org.example.docentes.model.entity.InteresseDisciplina;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,8 +1,8 @@
 package org.example.docentes.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.docentes.entity.DisponibilidadeProfessor;
-import org.example.docentes.service.DisponibilidadeProfessorService;
+import org.example.docentes.model.entity.DisponibilidadeProfessor;
+import org.example.docentes.model.service.DisponibilidadeProfessorService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

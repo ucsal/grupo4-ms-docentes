@@ -1,4 +1,4 @@
-package org.example.docentes.entity;
+package org.example.docentes.model.entity;
 
 //import com.seugrupo.docentes.enums.Prioridade;
 import jakarta.persistence.*;

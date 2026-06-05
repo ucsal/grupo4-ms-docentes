@@ -2,8 +2,8 @@ package org.example.docentes.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.example.docentes.entity.Formacao;
-import org.example.docentes.service.FormacaoService;
+import org.example.docentes.model.entity.Formacao;
+import org.example.docentes.model.service.FormacaoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

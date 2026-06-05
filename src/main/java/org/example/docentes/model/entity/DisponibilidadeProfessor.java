@@ -1,4 +1,4 @@
-package org.example.docentes.entity;
+package org.example.docentes.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
